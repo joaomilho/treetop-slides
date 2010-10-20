@@ -1,0 +1,5 @@
+grammar Parens
+  rule parens
+    '(' ('1'/parens) ')'
+  end
+end

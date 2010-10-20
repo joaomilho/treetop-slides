@@ -1,0 +1,11 @@
+grammar Csv
+  rule file
+    (line "\n")* line
+  end
+  rule line
+    (value ',')* value
+  end
+  rule value
+    [^,]+
+  end
+end
