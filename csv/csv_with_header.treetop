@@ -1,8 +1,11 @@
 grammar Csv
   rule file
-		l:(line nl)* line {
+		line t:(nl line)* {
+			def header
+				line.values
+			end
 			def lines
-				l.elements.map{|e| e.line.values } << line.values
+				t.elements.map{|e| Hash[header.zip(e.line.values)] }
 			end
 		}
   end
