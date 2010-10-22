@@ -1,6 +1,5 @@
-module Klass
-  class Char
-    def zaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaap
-    end 
-  end
+class Char < Treetop::Runtime::SyntaxNode
+  def zaaap
+    text_value + " zaaaaaaped"
+  end 
 end

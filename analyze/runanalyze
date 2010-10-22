@@ -3,4 +3,4 @@ require 'rubygems'
 require 'treetop'
 Treetop.load "analyze"
 p = AnalyzeParser.new
-puts p.parse("<<<pADDa>MULTb>DIVc>").val
+puts p.parse(ARGV.first || "<<<pADDa>MULTb>DIVc>").val

@@ -7,10 +7,6 @@ module State
     def self.run code
       Treetop.load 'state'
       parsed = StateParser.new.parse(code).run({})
-      #raise "Booooo" unless parsed
-      #raise parsed.inspect
-      #parsed.state = OpenStruct.new
-      #parsed.run
     end
     def run(state)
       elements.map{|e| e.run(state) }
@@ -19,13 +15,11 @@ module State
   end
   class SetNode < StateNode
     def run(state)
-      #raise "#{var.text_value}---#{val.v.text_value}"
       state[var.text_value] = val.v.text_value
     end
   end
   class GetNode < StateNode
     def run(state)
-      #raise "#{var.text_value}---#{val.v.text_value}"
       puts state[var.text_value]
     end
   end

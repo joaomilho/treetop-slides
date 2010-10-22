@@ -4,7 +4,7 @@ grammar State
   end
   rule instruction
     spaces? "set" spaces var spaces val <SetNode>
-	/
+		/
     spaces? "get" spaces var <GetNode>
   end
   rule var
@@ -17,6 +17,6 @@ grammar State
     [\s]+
   end
   rule break
-    "\n"
+    [\n]
   end
 end

@@ -1,8 +1,9 @@
+#!/usr/bin/env ruby
 require 'rubygems'
 require 'treetop'
 require 'state'
 code = <<-CODE
-set a xyz
+set a "xyz"
 get a
 CODE
 
