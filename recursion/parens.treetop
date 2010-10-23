@@ -1,5 +1,16 @@
 grammar Parens
   rule parens
-    '(' ('1'/parens) ')'
+    '(' parens ')' {
+			def depth
+				parens.depth + 1
+			end
+		}
+		/
+		[a-z0-9] {
+			def depth
+				0
+			end
+		}
+		
   end
 end

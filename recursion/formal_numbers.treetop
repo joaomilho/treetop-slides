@@ -1,4 +1,4 @@
-grammar Rrec
+grammar Formal
   rule num
     s:succ* zero { def n; s.elements.size end }
   end
