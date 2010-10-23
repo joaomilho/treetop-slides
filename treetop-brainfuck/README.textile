@@ -1,0 +1,35 @@
+h1. Brainfuck interpreter in Ruby
+
+It was made with Treetop. Alpha...
+
+h2. What's in it?
+
+Well, it has a 763 bytes brainfuck interpreter written in Ruby with Treetop. Kinda large, but better than most other ruby brainfuck interpreters, but the most important, it is _extremelly_ easy to understand if you're learning TreeTop.
+
+It also has as string to brainfuck converter.
+
+h2. Usage
+
+Running a brainfuck file:
+
+./runbrainfuck code/hello_world.bf
+
+Piping:
+
+cat code/hello_world.bf | ./runbrainfucke
+
+Text to brainfuck:
+
+./txt2bf "foo bar baz"
+
+Text to brainfuck to text again:
+
+./txt2bf "foo bar baz" | ./runbrainfucke
+
+h2. Future plans
+
+Create ebf (embedded brainfuck), and create a revolutionary MVC web framework named "Brainfuck on Rails". Just kidding.
+
+h2. License
+
+You can use it, but you _have_ to say it's yours.
