@@ -6,7 +6,7 @@ module State
     attr_accessor :state
     def self.run code
       Treetop.load 'state'
-      parsed = StateParser.new.parse(code).run({})
+      parsed = StateParser.new.parse(code).run({}) # state hash begins empty
     end
     def run(state)
       elements.map{|e| e.run(state) }
@@ -15,7 +15,7 @@ module State
   end
   class SetNode < StateNode
     def run(state)
-      state[var.text_value] = val.v.text_value
+      state[var.text_value] = val.v.text_value # v is what is inside dbl qts
     end
   end
   class GetNode < StateNode

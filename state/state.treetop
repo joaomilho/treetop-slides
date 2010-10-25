@@ -16,7 +16,4 @@ grammar State
   rule spaces
     [\s]+
   end
-  rule break
-    [\n]
-  end
 end
