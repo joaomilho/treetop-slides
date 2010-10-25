@@ -1,6 +1,7 @@
 grammar Ops
   rule paren_opn
-    '(' opn ')' { def val; opn.val end }
+    '(' paren_opn ')' { def val; paren_opn.val end } /
+		opn
   end
   rule opn
     opd opt opd { def val; eval("#{opd1.val} #{opt.text_value} #{opd2.val}").to_i end }
