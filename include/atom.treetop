@@ -2,10 +2,12 @@ grammar Atom
   rule atom
     hydrogen / oxygen
   end
-	rule hydrogen
-		'H'
-	end
-	rule oxygen
-		'O'
-	end
+
+  rule hydrogen
+    'H'
+  end
+
+  rule oxygen
+    'O'
+  end
 end
